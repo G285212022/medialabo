@@ -1,0 +1,10 @@
+h1 {
+    color: white;
+	text-shadow: 1px 1px 10px black;
+    background: linear-gradient(.25turn,white,10%,black);
+}
+
+h2 {
+    color: #dfdfdf;
+    text-shadow: 1px 1px 1px black;
+}
