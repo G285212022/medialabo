@@ -4,7 +4,7 @@ let kotae = Math.floor(Math.random()*10) + 1;
 console.log('答え（デバッグ用）: ' + kotae);
 
 // 入力回数（予想回数）
-let kaisu = 4;
+let kaisu = 1;
 
 // 予想を4回実行する
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
@@ -15,9 +15,6 @@ hantei();
 hantei();
 
 // let ns = [1,2,3,4];
-let count = 1;
-
-let bool = True;
 //   let yoso = 4;
 
 //   for (let i=0; i<ns.length; i=i+1) {
@@ -40,24 +37,21 @@ function hantei() {
 
   let yoso = 4;
   
-  console.log(count + "回目の予想:" + yoso);
-  if(bool===True){
-    if(count <= 3 && kotae === yoso){
+  console.log(kaisu + "回目の予想:" + yoso);
+    if(kaisu <= 3 && kotae === yoso){
         console.log("正解です.おめでとう！");
-        bool = False;
-    }else if(count <= 3 && kotae > yoso){
+    }else if(kaisu <= 3 && kotae > yoso){
         console.log("まちがい．答えはもっと大きいですよ");
-    }else if(count <= 3 && kotae < yoso){
+    }else if(kaisu <= 3 && kotae < yoso){
         console.log("まちがい．答えはもっと小さいですよ");
-    }
-  }else{
+    }else{
         console.log("答えは" + kotae + "でした.すでにゲームは終わっています.");
-  }
+    }
   
   // 課題3-1: 正解判定する
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
-  count=count+1;
+  kaisu = kaisu + 1;
 }
 
 /*if(kaisu < 4){
