@@ -36,7 +36,7 @@ for(let n of w){
 	n.remove();
 }
 // 練習4-5 箇条書き追加プログラム
-p3 = document.querySelector('ul#location'); 
+let p3 = document.querySelector('ul#location'); 
 for(let a of data){
 	p1 = document.createElement('li');
 	p1.textContent = a.name + " ... 緯度:"　+ a.lat + ", 経度:" + a.lng;
