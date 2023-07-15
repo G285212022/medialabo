@@ -47,3 +47,8 @@ let data = {
 
 ////////// 課題3-2 ここからプログラムを書こう
 
+console.log(data);
+let h1 = document.querySelector('div#result'); 
+let p = document.createElement('p'); 
+p.textContent = data;
+h1.insertAdjacentElement('afterend', p);
