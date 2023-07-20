@@ -3,27 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>プロジェクト課題</title>
-    <script id="sid"></script>
     <script src="project.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <link rel="projectsheet" href="project.css">
   </head>
   <body>
     <label for="shimei">世界の天気 </label>
     <input type="text" name="id" id="sekai" size="10">
     <button id="print">表示</button>
-    <div id="result"></div>
+    <div id="result">
+      <p id="ido">緯度：</p>
+      <p id="keido">経度：</p>
+      <p id="tenki">天気：</p>
+      <p id="saitei">最低気温：</p>
+      <p id="saikou">最高気温：</p>
+      <p id="situdo">湿度：</p>
+      <p id="fusoku">風速：</p>
+      <p id="fukou">風向：</p>
+      <p id="tosi">都市名：</p>
+    </div>
   </body>
 </html>
-
-<!-- <h1>⚪︎世界の天気</h1>
-<ul>
-    <li>緯度: 116.3972</li>
-    <li>経度: 39.9075</li>
-    <li>天気: 曇りがち</li>
-    <li>最低気温: 9.94</li>
-    <li>最高気温: 9.94</li>
-    <li>湿度: 14</li>
-    <li>風速: 2.65</li>
-    <li>風向: 197</li>
-    <li>都市名: 北京市</li>
-</ul> -->
