@@ -48,7 +48,53 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 
 console.log(data);
+console.log(data.coord.lon);
 let h1 = document.querySelector('div#result'); 
-let p = document.createElement('p'); 
-p.textContent = data;
-h1.insertAdjacentElement('afterend', p);
+let p1 = document.createElement('p'); 
+p1.textContent = data.coord.lon;
+h1.insertAdjacentElement('beforeend', p1);
+
+let b = document.querySelector('#print');
+b.addEventListener('click', greeting);
+
+function greeting() {
+	let i = document.querySelector('input[name="id"]');
+	let id = i.value;
+	console.log(id);
+  let a = document.querySelector('script#sid'); 
+  let b = document.createElement('src'); 
+  a.textContent = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + id + '.json';
+  b.insertAdjacentElement('afterend', a);
+}
+
+let d = document.querySelector('#sendRequest');
+d.addEventListener('click', sendRequest);
+
+function sendRequest() {
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + id + '.json';
+
+  axios.get(url)
+      .then(showResult)   
+      .catch(showError)   
+      .then(finish);      
+}
+
+function showResult(resp) {
+  let data = resp.data;
+
+  if (typeof data === 'string') {
+      data = JSON.parse(data);
+  }
+
+  console.log(data);
+
+  console.log(data.x);
+}
+
+function showError(err) {
+  console.log(err);
+}
+
+function finish() {
+  console.log('Ajax 通信が終わりました');
+}

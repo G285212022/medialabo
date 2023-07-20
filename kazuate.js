@@ -20,7 +20,7 @@ function hantei() {
     a2.textContent = su;
 
     console.log(kaisu + "回目の予想:" + su);
-    if(kaisu < 4 && kotae === su){
+    if(kaisu < 4 && kotae == su){
         a3.textContent = "正解です.おめでとう！";
     }else if(kaisu < 4 && kotae > su){
         a3.textContent = "まちがい.答えはもっと大きいですよ";
