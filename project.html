@@ -3,24 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>プロジェクト課題</title>
+    <link rel="stylesheet" href="project.css">
     <script src="project.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
-    <link rel="projectsheet" href="project.css">
   </head>
   <body>
-    <label for="shimei">世界の天気 </label>
-    <input type="text" name="id" id="sekai" size="10">
-    <button id="print">表示</button>
-    <div id="result">
-      <p id="ido">緯度：</p>
-      <p id="keido">経度：</p>
-      <p id="tenki">天気：</p>
-      <p id="saitei">最低気温：</p>
-      <p id="saikou">最高気温：</p>
-      <p id="situdo">湿度：</p>
-      <p id="fusoku">風速：</p>
-      <p id="fukou">風向：</p>
-      <p id="tosi">都市名：</p>
-    </div>
+    <h1>世界の天気</h1>
+    <form method="post" action="example.cgi"></form>
+    <p>
+      <select name="example3" size="5">
+      <option value="1">ID = 1, Cairo カイロ （エジプト）</option>
+      <option value="2">ID = 2, Moscow モスクワ （ロシア）</option>
+      <option value="3">ID = 3, Johannesburg ヨハネスブルク （南アフリカ）</option>
+      <option value="4">ID = 4, Beijing 北京 （中華人民共和国）</option>
+      <option value="5">ID = 5, Tokyo 東京 （日本）</option>
+      <option value="6">ID = 6, Singapore シンガポール</option>
+      <option value="7">ID = 7, Sydney シドニー （オーストラリア）</option>
+      <option value="8">ID = 8, London ロンドン （イギリス）</option>
+      <option value="9">ID = 9, Paris パリ （フランス）</option>
+      <option value="10">ID = 10, Rio de Janeiro リオデジャネイロ （ブラジル）</option>
+      <option value="11">ID = 11, New York ニューヨーク （アメリカ合衆国）</option>
+      <option value="12">ID = 12, Los Angeles ロサンゼルス （アメリカ合衆国）</option>
+      </select>
+      </p>
+      <p>表示させたい国のID（半角）を入力してください</p>
+      <input type="text" name="id" id="sekai" size="10">
+      <button id="print">表示</button>
+    </form>
+
+    <p>緯度：<span id="ido"></span></p>
+    <p>経度：<span id="keido"></span></p>
+    <p>天気：<span id="tenki"></span></p>
+    <p>最低気温：<span id="saitei"></span></p>
+    <p>最高気温：<span id="saikou"></span></p>
+    <p>湿度：<span id="situdo"></span></p>
+    <p>風速：<span id="fuusoku"></span></p>
+    <p>風向：<span id="fuukou"></span></p>
+    <p>都市名：<span id="tosi"></span></p>
   </body>
 </html>
